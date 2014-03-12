@@ -1,4 +1,10 @@
-<h1>Listing gists</h1>
+
+
+<div class="page-header">
+	<h1> Gisty </h1>
+</div>
+
+ <div style="width:660px"> <%= will_paginate @posts %>  </div>
 
 <table>
   <thead>
@@ -11,14 +17,13 @@
       <th></th>
     </tr>
   </thead>
-<%= will_paginate %>
   <tbody>
     <% @gists.each do |gist| %>
       <tr>
         <td><%= gist.snippet[0,25] %></td>
         <td><%= gist.lang %></td>
         <td><%= gist.description %></td>
-        <td><%= link_to 'Show', gist %></td>
+        <td> <%= link_to 'Show', gist %></td>
         <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
         <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
