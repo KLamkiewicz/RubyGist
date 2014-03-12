@@ -1,12 +1,13 @@
 
 
-<div class="page-header">
-	<h1> Gisty </h1>
+<div class="header bg-primary">
+	<a href="/gists" class="btn btn-primary btn-lg active" role="button"> Main Page</a>
 </div>
 
- <div> <%= will_paginate @posts %>  </div>
 
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<div class="main center-block bg-info">
+
+ <div class="text-center"> <%= will_paginate @posts %>  </div>
 
 
 <table class="table table-bordered">
@@ -23,12 +24,13 @@
   <tbody>
     <% @gists.each do |gist| %>
       <tr>
-        <td><%= gist.snippet[0,25] %></td>
+        <td class="bg-primary"><%= gist.snippet[0,25] %></td>
         <td><%= gist.lang %></td>
         <td><%= gist.description %></td>
-        <td> <%= link_to 'Show', gist %></td>
-        <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
-        <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td> <%=link_to 'Show Whole', gist,class:'btn btn-success btn-block' %> </td>
+        <td><%= link_to 'Edit', edit_gist_path(gist),class:'btn btn-warning btn-block' %></td>
+        <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-warning btn-danger btn-block' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +38,6 @@
 
 <br>
 
-<%= link_to 'New Gist', new_gist_path %>
+<%= link_to 'New Gist', new_gist_path, class:'btn btn-success btn-lg' %>
+
+</div>

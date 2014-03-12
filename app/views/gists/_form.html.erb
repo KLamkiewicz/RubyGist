@@ -1,4 +1,6 @@
 <%= form_for(@gist) do |f| %>
+<% lex = Pygments::Lexer.all.select{|y| !(y.filenames.empty?)}.map{|x|[x.name, x.filenames.first.gsub('*','')]}.sort %>
+
   <% if @gist.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</h2>
@@ -17,7 +19,7 @@
   </div>
   <div class="field">
     <%= f.label :lang %><br>
-    <%= f.text_field :lang %>
+    <%= f.select :lang, lex %>
   </div>
   <div class="field">
     <%= f.label :description %><br>

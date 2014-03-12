@@ -1,8 +1,16 @@
+
+
+<div class="header bg-primary">
+	<a href="/gists" class="btn btn-primary btn-lg active" role="button"> Main Page</a>
+</div>
+
+<div class="main">
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Snippet:</strong>
-  <%= @gist.snippet %>
+  <%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %>
 </p>
 
 <p>
@@ -10,7 +18,7 @@
   <%= @gist.lang %>
 </p>
 
-<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %>
+
 
 <p>
   <strong>Description:</strong>
@@ -19,3 +27,5 @@
 
 <%= link_to 'Edit', edit_gist_path(@gist) %> |
 <%= link_to 'Back', gists_path %>
+
+</div>
