@@ -4,6 +4,11 @@ gem 'pygments.rb'
 gem 'redcarpet'
 gem 'quiet_assets'
 
+gem 'will_paginate', '~> 3.0.5'
+gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
@@ -11,7 +16,7 @@ gem 'rails', '4.0.3'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-#gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

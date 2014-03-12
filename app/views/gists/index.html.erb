@@ -11,11 +11,11 @@
       <th></th>
     </tr>
   </thead>
-
+<%= will_paginate %>
   <tbody>
     <% @gists.each do |gist| %>
       <tr>
-        <td><%= gist.snippet %></td>
+        <td><%= gist.snippet[0,25] %></td>
         <td><%= gist.lang %></td>
         <td><%= gist.description %></td>
         <td><%= link_to 'Show', gist %></td>
