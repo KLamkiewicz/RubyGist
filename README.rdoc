@@ -11,4 +11,4 @@
 
 
 ===Link do aplikacji na Heroku: 
-* Link
+http://mojegisty.herokuapp.com/
