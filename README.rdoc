@@ -1,6 +1,7 @@
-# My gists
+=My Gists
 
-==Wykorzystane gemy:
+
+===Wykorzystane gemy:
 
 * gem 'pygments.rb'
 * gem 'redcarpet'
@@ -9,5 +10,5 @@
 * gem 'bootstrap-sass'
 
 
-==Link do aplikacji na Heroku: 
-* 
+===Link do aplikacji na Heroku: 
+* Link
