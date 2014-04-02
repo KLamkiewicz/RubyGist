@@ -1,6 +1,18 @@
 =My Gists
 
 
+===Co zrobiłem:
+
+* Przystosowałem przeglądanie strony dla urządzeń mobilnych
+* Stworzyłem wyszukiwanie snippetów po opisie
+* Stworzyłem 'sztuczne' wpisy w pliku seeds.rb
+* Wrzuciłem stronę na Heroku
+* Dodałem infinite scrolling
+* Do css wykorzystałem bootstrapa z pomocą gemu 'bootstrap-sass'
+* Kolorowanie składni z pomocą pygments.rb
+
+
+
 ===Wykorzystane gemy:
 
 * gem 'pygments.rb'
@@ -12,9 +24,3 @@
 
 ===Link do aplikacji na Heroku: 
 http://mojegisty.herokuapp.com/
-
-===Co zrobiłem:
-
-* Do css wykorzystałem bootstrapa z pomocą gemu 'bootstrap-sass'
-* Paginacja z wykorzystaniem 'will_paginate'
-* Kolorowanie składni z pomocą pygments.rb
