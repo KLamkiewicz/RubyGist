@@ -1,0 +1,14 @@
+<div class="col-lg-10" >
+
+	  <div> Language: <%= gist.lang %></div>
+      <div>Description: <%= gist.description[0,20] %></div>
+
+      <div class="snippet"><%= raw Pygments.highlight(gist.snippet.length > 20 ? gist.snippet[0,20] + "..." : gist.snippet, lexer: gist.lang) %></div>
+
+      <div>
+              <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger",style:"float: right" %>
+              <%= link_to 'Edit', edit_gist_path(gist), class: "btn btn-warning",style:" float: right; margin-right: 15px" %>
+			  <%= link_to 'Show', gist, class: "btn btn-primary",style:"float : right; margin-right: 15px" %>
+
+      </div>
+</div>
